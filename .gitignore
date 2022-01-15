@@ -5,3 +5,7 @@
 # Ignore environment stuff
 env
 .vscode
+
+# AV files
+*.wav
+*.mp4
