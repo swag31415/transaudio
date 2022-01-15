@@ -1,0 +1,7 @@
+# Ignoore Binaries
+*.exe
+*.dll
+
+# Ignore environment stuff
+env
+.vscode
