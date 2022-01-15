@@ -3,7 +3,12 @@
 
 import speech_recognition as sr
 r = sr.Recognizer()
-af = sr.AudioFile(input('Enter audio file name: '))
+afn = input('Enter audio file name: ')
+af = sr.AudioFile(afn)
 with af as src:
   a = r.record(src)
-print(r.recognize_google(a))
+res = r.recognize_sphinx(a)
+print(res)
+with open(afn + '.txt', 'w') as f:
+  f.write(res)
+print('Output saved to', afn + '.txt')
